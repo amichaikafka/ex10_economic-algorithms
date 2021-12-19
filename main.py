@@ -12,8 +12,6 @@ def what_should(prefer:list,preferrs_cout:dict)->list:
         elif preferrs_cout[max_res[0]]<preferrs_cout[p]:
             max_res.clear()
             max_res.append(p)
-        elif preferrs_cout[max_res[0]]>preferrs_cout[p]:
-            continue
     return max_res
 def conditioned_utilitarian(total:float,subjects:List[str],
                 preferences:List[List[str]]):
@@ -93,29 +91,6 @@ def conditioned_utilitarian(total:float,subjects:List[str],
     print(f"Final budget:{res}")
 
 
-
-
-
-
 if __name__ == '__main__':
-    # subjects=["Security","Economy","Education","Sport"]
-    # prefer=[["Security","Economy"],["Security","Education"],["Security","Sport"],["Economy","Education"],["Security"]]
-    # total=500
-    # conditioned_utilitarian(total,subjects,prefer)
-    # prefer = [["Economy","Sport"], ["Security", "Education"], ["Security", "Sport"], ["Economy", "Education"], ["Security"]]
-    # conditioned_utilitarian(total, subjects, prefer)
-    # prefer = [["Economy", "Sport"], ["Security", "Education"], ["Security", "Sport"], ["Economy", "Education"],
-    #           ["Security","Sport","Economy"]]
-    # conditioned_utilitarian(total, subjects, prefer)
-    # subjects = ["Security"]
-    # prefer=[["Security"],["Security"]]
-    # conditioned_utilitarian(total, subjects, prefer)
-    # subjects = ["Security","Economy"]
-    # prefer=[["Security"],["Economy"]]
-    # conditioned_utilitarian(total, subjects, prefer)
-    # prefer = [["Security","Economy"], ["Security","Economy"]]
-    # conditioned_utilitarian(total, subjects, prefer)
-    # prefer = [["Economy"], ["Security", "Economy"]]
-    # conditioned_utilitarian(total, subjects, prefer)
     (failures, tests) = doctest.testmod(report=True)
     print("{} failures, {} tests".format(failures, tests))
